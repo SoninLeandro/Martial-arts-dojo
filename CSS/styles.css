@@ -1,0 +1,185 @@
+@import url("mobilestyles.css");
+@import url("tabletstyles.css");
+
+body {
+    background-image: linear-gradient(white, black);
+}
+
+header img {
+    width: 100%; /*This will make the image the size of the viewport*/
+    height: auto; /*This will change the size based on the size of the viewport. Makes it flexible */
+    max-width: 500px; /*It will never be bigger than 500px*/
+}
+
+nav {
+    margin-bottom: 1em;
+    border-radius: 1.0em; /*This rounds the corner of the elements*/
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+nav ul li {
+    background-color: black;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin: 0.75em;
+    list-style-type: none; /*This removes bullet points from lists*/ 
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /*This removes the underline from a hyperlink*/
+}
+
+figure {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    margin-left: 0;
+}
+
+figure img {
+    max-width: 800px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+}
+
+main {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 1.0em;
+    background-image: linear-gradient(white, white, grey);
+    min-height: 400px;
+    padding: 1em;
+}
+
+/*This is for our three columns layout*/
+
+main .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main div .column {
+    float: left;
+}
+
+main div .left {
+    float: left;
+    width: 15%;
+    padding: 1em;
+    
+}
+
+main div .right {
+    float: right;
+    padding: 1em;
+    width: 13%;
+    
+}
+/*Three columns layout ends*/
+
+/*Schedule table begins*/
+.schedule table {
+    border: 0.1em solid black;
+    width: 95%;
+    border-collapse: collapse;
+    margin-left: 2.5%;
+    background-color: white;
+}
+
+.schedule caption {
+    border: 0.1em solid black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.schedule th, .schedule td {
+    border: 0.1em solid black;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: black;
+    color: white;
+}
+/*Schedule table ends*/
+
+#enrollprice {
+    margin-top: 0.5em;
+    border: 0.1em solid black;
+    border-collapse: collapse;
+}
+
+#enrollprice caption {
+    background-color: black;
+    color: white;
+}
+
+#enrollprice td {
+    border: 0.1em solid black;
+    padding: 0.5em;
+    text-align: center;
+    
+}
+
+footer {
+    background-image: linear-gradient(to right, white, grey);
+    border-radius: 1.0em;
+    text-align: center;
+}
+
+/*Begins desktop.*/
+@media screen and (min-width:961px) {
+
+    header {
+        background-image: linear-gradient(to right, white, black, black, black);
+        box-shadow: 0.5em 0.5em 0.5em black;
+
+    }
+
+    header img {
+        width: auto;
+        height: 5.1em;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    nav {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        background-color: black;
+        float: right; /*This floats the nav element to the right side of the page*/
+        margin-top: -5.3em; /*This moves the nav element above where it would normally be, because its negative.*/
+        width: 60%;
+        border-top: solid 0.2em black;
+        border-bottom: solid 0.2em black;
+        max-width: 50%;
+    }
+
+    nav ul li {
+        display: inline-block; /*This lists items horizontally and allows them to strech*/
+        border-radius: 1em;
+        
+    }
+
+    main div .center {
+        padding: 5px;
+        width: 50%;
+        border-right: 0.2em solid black;
+        border-left: 0.2em solid black;
+    }
+}
+/*Ends desktop.*/

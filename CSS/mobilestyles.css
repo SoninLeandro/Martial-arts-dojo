@@ -1,0 +1,20 @@
+@media screen and (max-width:640px) {
+    nav ul li {
+        border-radius: 1em;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    main iframe {
+        max-width: 90%;
+    }
+
+    
+
+}

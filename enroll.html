@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Enroll</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./CSS/styles.css" rel="stylesheet">
+
+        <script src="./Scripts/main.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <header><img src="../Media/Images/Logo.png"  alt="Martial Arts Dojo logo"></header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="enroll.html">Enroll</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <table>
+                <tr>
+                    <td><label for="firstname">First Name</label></td>
+                    <td><input type="text" id="firstname" name="firstname"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="lastname">Last Name</label></td>
+                    <td><input type="text" id="lastname" name="lastname"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email" name="email"><!--Input Type "email" will expect an email--></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Phone</label></td>
+                    <td><input type="tel" id="phone" name="phone"><!--Will expect a tel phone number--></td>
+                </tr>
+            </table>
+            
+            <table id="enrollprice">
+                <caption>Enroll</caption>
+                <tr>
+                    <td>Adult</td>
+                    <td>£50</td>
+                    <td><input type="radio" id="adult" name="course" value="50"></td><!--I don't put the £ so JS can do the maths easily-->
+                </tr>
+
+                <tr>
+                    <td>Teen</td>
+                    <td>£100</td>
+                    <td><input type="radio" id="teen" name="course" value="100"></td><!--The "name" makes them all part of the same group so you can only pick one-->
+                </tr>
+
+                <tr>
+                    <td>Child</td>
+                    <td>£25</td>
+                    <td><input type="radio" id="child" name="course" value="25"></td>
+                </tr>
+
+                <tr>
+                    <td>Uniforms</td>
+                    <td>£50</td>
+                    <td><input type="number" id="uniforms" min="0" value="0"></td><!--Min=0 meaning you can not put a negative number-->
+                </tr>
+            </table>
+
+            <p><input type="submit" id="submit" value="Submit" onclick="calculate()"></p>
+            <input type="reset" id="reset" value="Reset">
+        </main>
+
+        <footer>
+            <p>Our location:<br>
+                123 street<br>
+                 London</p>
+            <p>Phone number: <a href="tel:555555885">(555)555885</a></p>
+            <p>Email adress: <a href="mailto:dojo@martialarts.com">dojo@martialarts.com</a></p>
+        </footer>
+
+
+    </body>
+
+</html>
